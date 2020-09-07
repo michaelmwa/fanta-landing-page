@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fanta Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="fantalogo.png" alt="Pepsi" class="logo" /></a>
+            <div class="toggleMenu" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Products</a>
+                </li>
+                <li>
+                    <a href="#">What's New</a>
+                </li>
+                <li>
+                    <a href="#">Newsletter</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textbox">
+                <h2>More Fanta<br><span>Less Serious</span></h2>
+                <p>Enjoy the refreshing tastes of Fanta®. Made with 100% natural Orange, Grape, Pineapple and Strawberry flavors. This fruity soda will make you Wanta Fanta!</p>
+                <a href="">View All Products</a>
+            </div>
+            <div class="imgbox">
+                <img src="fantapng.png" alt="Fanta" class="pepsi">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li><img src="fantalemon.png" alt="Fanta" onclick="imgSlider('fantalemon.png'); changeBgColor('#0062be');"></li>
+            <li><img src="fantapurple.png" alt="Fanta" onclick="imgSlider('fantapurple.png'); changeBgColor('#838488');"></li>
+            <li><img src="fantapeach.png" alt="Fanta" onclick="imgSlider('fantapeach.png'); changeBgColor('#1e1e1e');"></li>
+        </ul>
+
+        <ul class="sci">
+            <li>
+                <a href="https://www.facebook.com/fanta/"><img src="facebook.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/fanta?lang=en"><img src="twitter.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/fanta/?hl=en"><img src="instagram.png" alt=""></a>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        function imgSlider(img) {
+            document.querySelector('.fanta').src = img;
+        }
+
+        function changeBgColor(color) {
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+
+        function toggleMenu() {
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
